@@ -1,1 +1,8 @@
 events#show page
+<%= link_to "Back to list", events_path %>
+
+<%= render 'single_event', event: @event %>
+
+<%= link_to "Edit", edit_event_path %>
+|
+| <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: "Delete the event'#{@event.name}'?"} %>
